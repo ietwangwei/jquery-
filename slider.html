@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slider demo</title>
+    <style>
+        .pro-box{
+            text-align: center;
+        }
+        .pro-img.pro-img li img{
+            border: 1px solid cornflowerblue;
+            width: 600px;
+            margin-top: 100px;
+            height: 260px;
+        }
+        li{
+            list-style: none;
+        }
+        .btn-dot{
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .btn-dot li{
+            display: inline-block;
+            width:13px;
+            height:13px;
+            cursor:pointer;
+            text-indent:-9999px;
+            margin-right:12px;
+            text-align:center;
+            color:#fff;
+            opacity: 0.75;
+            background: url("img/li-dot.png") no-repeat 0 -13px;
+        }
+        .btn-dot li.on{
+            background-position: 0 0;
+        }
+        .btn-angle{
+            position: absolute;
+            z-index: 3;
+            width: 60px;
+            height: 60px;
+            top: 200px;
+            -moz-border-radius: 32px;
+            -webkit-border-radius: 32px;
+            border-radius: 32px;
+            box-shadow: #fff 20px;
+            cursor: pointer;
+        }
+        .btn-angle-r{
+            right: 22%;
+            background: url("img/i-right.png") center no-repeat;
+            float: right;
+        }
+        .btn-angle-l{
+            left: 25%;
+            background: url("img/i-left.png") center no-repeat;
+        }
+        .setting-box{
+            padding: 10px;
+        }
+        .setting-box .tme{
+
+        }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+<div class="pro-box">
+    <ul class="pro-img">
+        <li><img src="img/img-1.jpg"></li>
+        <li class="hide"><img src="img/img-2.png" alt="222"></li>
+        <li class="hide"><img src="img/img-3.jpg" alt="333"></li>
+        <li class="hide"><img src="img/img-4.jpg" alt="444"></li>
+        <li class="hide"><img src="img/img-5.jpg" alt="555"></li>
+        <li class="hide"><img src="img/img-6.jpg" alt="666"></li>
+    </ul>
+    <div class="btn-angle btn-angle-l prev"></div>
+    <div class="btn-angle btn-angle-r next"></div>
+    <ul class="btn-dot">
+        <li class="l-controller">1</li>
+        <li class="l-controller">2</li>
+        <li class="l-controller">3</li>
+        <li class="l-controller">4</li>
+        <li class="l-controller">5</li>
+        <li class="l-controller">6</li>
+    </ul>
+    <i class="fa fa-battery-three-quarters"></i>
+    <div class="setting-box">
+        <div class="time">
+            <label class = 'left'>设置间隔时间：</label>
+            <label class = 'left'><input type = 'text'></label>毫秒
+        </div>
+    </div>
+</div>
+    <script type="text/javascript" src="slider.js"></script>
+</body>
+</html>
